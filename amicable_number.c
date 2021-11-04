@@ -1,18 +1,5 @@
 #include <stdio.h>
 
-int SumOfFactors(int num)
-{
-    int sum = 0;
-    for (int j = 1; j < num; j++) {
-    // for (int j = 1; j < (int)M/2; j++) {
-        if (num % j == 0) {
-            sum += j;
-        }
-    }
-
-    return sum;
-}
-
 int SumOfFactorsFast(int num)
 {
     int sum = 1;
@@ -41,7 +28,7 @@ int main()
         int j = SumOfFactorsFast(i);
 
         if (j > i && SumOfFactorsFast(j) == i) {
-            printf("%d and %d are a pair of friend numbers.\n", i, j);
+            printf("%d and %d are a pair of amicalble numbers.\n", i, j);
         }
     }
 
